@@ -11,6 +11,25 @@ class App extends Component {
     selectedItem: null,
   }
 
+  componentWillMount(){
+    document.addEventListener('keydown', this.handleKeyDown);
+  }
+
+
+  componentWillUnmount() {
+      document.removeEventListener('keydown', this.handleKeyDown);
+  }
+
+  handleKeyDown = (event) => {
+    if (event.keyCode === 38) {
+      event.preventDefault()
+      this.selectPrevious()
+    } else if (event.keyCode === 40) {
+      event.preventDefault()
+      this.selectNext()
+    }
+  }
+
   handleClick = (index) => {
     this.setState({
       selectedItem: index,
