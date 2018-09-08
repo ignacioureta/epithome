@@ -1,0 +1,43 @@
+body {
+  margin: 20px;
+}
+
+.questionsContainer {
+  display: flex;
+}
+
+.questionList {
+  list-style: none;
+  padding: 0px;
+}
+
+.questionItem {
+  margin: 5px;
+  border: 1px solid lightgrey;
+  display: flex;
+  cursor: pointer;
+}
+
+.questionNumber {
+  background-color: lightgrey;
+  color: #fff;
+  width: 25px;
+  padding: 10px;
+  text-align: center;
+}
+
+.questionText {
+  padding: 10px;
+}
+
+.selectionControls {
+  margin: 20px 0px 0px 15px;
+  padding: 10px;
+  border: 1px solid lightgrey;
+  height: 100%;
+}
+
+.arrowButton {
+  cursor: pointer;
+  user-select: none;
+}
