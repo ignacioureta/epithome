@@ -26,6 +26,11 @@ body {
   text-align: center;
 }
 
+.selectedItem {
+  background-color: black;
+  border: 1px solid black;
+}
+
 .questionText {
   padding: 10px;
 }
