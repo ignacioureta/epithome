@@ -1,21 +1,9 @@
 import React, { Component } from 'react';
 import classNames from 'classnames'
 
-import questions from './questions';
-
 class QuestionList extends Component {
-  state = {
-    selectedItem: null,
-  }
-
-  handleSelect = (index) => {
-    this.setState({
-      selectedItem: index,
-    })
-  }
-
   render() {
-    const { selectedItem } = this.state
+    const { selectedItem, onClick, questions } = this.props
 
     return (
       <ul className="questionList">
@@ -23,7 +11,7 @@ class QuestionList extends Component {
           <li
             className="questionItem"
             key={question + idx}
-            onClick={() => { this.handleSelect(idx) }}
+            onClick={() => { onClick(idx) }}
           >
             <div className={classNames('questionNumber', { selectedItem: selectedItem === idx } )}>{idx + 1}</div>
             <div className="questionText">{question}</div>
